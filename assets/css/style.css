@@ -13,7 +13,7 @@ body{
     margin: 0;
     padding: 0;
     font-size: .9rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: #2d2d2d;
 }
 
@@ -126,6 +126,15 @@ ul li{
     letter-spacing: 1px;
 }
 
+.buyBtn{
+    background: var(--primary);
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    border-radius: 12px;
+    transform: scale(1);
+    transition: all ease .5s;
+    box-shadow: none;
+}
 header{
     padding-top: 30px;
     background: url("https://images.unsplash.com/photo-1544616639-8d0bf4c2f35a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80") no-repeat;
@@ -143,12 +152,9 @@ header{
     letter-spacing: 1px;
 }
 .header2{
-    background: url('//events.mastermind.com/hosted/images/02/d161fc274743f6aa2d848aa233db8d/Tony-Robbins.jpg') no-repeat !important;
-    background-size: 100% auto !important;
-    -webkit-background-size: 100% auto !important;
-    padding-bottom: 60px;
+    background-size: 100%;
+    padding-bottom: 30px;
     padding-top: 30px;
-    min-height: 700px;
 }
 .header2 p{
     font-size: 19px;
@@ -162,59 +168,44 @@ header{
     margin-bottom: 20px;
     letter-spacing: 1px;
 }
-.header-video_img{
-    border-radius: 4px;
-    overflow: hidden;
-}
 
-.section-title h3{
-    font-family: 'Lato',sans-serif;
-    font-size: 2rem;
-    display: inline-block;
-    padding: 0 0 30px;
-    text-transform: uppercase;
-    border-bottom: 3px solid var(--primary);
-}
-
-#whatYouWillLearn .card{
+/*card*/
+.card{
     border: none;
-    border-radius: 10px;
-    background: rgb(255, 255, 255);
-    box-shadow: 0px 11px 24px -12px rgba(0, 0, 0, 0.17);
-    min-height: 200px;
-}
-
-#whatYouWillLearn .card h4{
-    display: inline-block;
-    border-bottom: 2px solid var(--primary);
-    padding-bottom: 5px;
-    position: absolute;
-    left: -70px;
-    bottom: 70px;
-    transform: rotate(-90deg);
-}
-
-.alexProfile{
-    border: 3px dashed #000104;
-    border-radius: 10px;
-    box-shadow: 10px 10px 30px -12px rgba(0, 0, 0, 0.2);
-    background: #eeeeee;
-}
-
-.alexProfile .profile-details{
-    padding: 2rem;
-    background: #fff;
     border-radius: 20px;
-    border-top: 5px solid #c2b27e;
-    border-bottom: 5px solid #c2b27e;
+}
+
+.profile_widget{
+    margin-top: -60px;
+    margin-bottom: 30px;
+}
+.profile_widget .card{
+    border-radius: 0;
+    box-shadow: 2px 2px 20px 6px rgba(126, 126, 126, 0.2);
+}
+
+/*profile-section*/
+.profile_section{
+    background: url("https://images.unsplash.com/photo-1544616639-8d0bf4c2f35a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80") no-repeat fixed center center;
+    background-size: cover;
+}
+
+.profile_section .profile_section_info h3{
+    font-size: 2.8rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
+.profile_section .profile_section_info p{
+    font-size: 18px;
+    line-height: 25.2px;
 }
 
 
-
-
-
-
-.modal-content {
+/*modal*/
+.close {
+    opacity: 1;
+}
+.modal .modal-content {
     position: relative;
     display: -ms-flexbox;
     display: flex;
@@ -222,95 +213,15 @@ header{
     flex-direction: column;
     width: 100%;
     pointer-events: auto;
-    background-color: #eeeeee;
+    background-color: #fff0;
     background-clip: padding-box;
-    border: 4px solid var(--primary);
-    border-radius: 15px;
+    border: none;
+    border-radius: .3rem;
     outline: 0;
 }
-button.close {
-    position: absolute;
-    right: -20px;
-    top: -20px;
-    cursor: pointer;
-    opacity: 1;
-    z-index: 999999;
-}
-.title{
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    font-size: 60px;
-}
 
-.form{
-    border-top: 2px dashed #000104;
-    border-bottom: 2px dashed #000104;
-    padding: 2rem;
-    background: #fff;
-    box-shadow: 8px 10px 18px 4px rgba(0, 0, 0, 0.39);
-}
-
-.whatIs{
-    padding-bottom: 20px;
-    position: relative;
-}
-
-.divider {
-    width: 100%;
-    min-height: 1px;
-    margin-bottom: 20px;
-}
-
-.inner-divider {
-    display: block;
-    width: 50%;
-    height: 3px;
-    margin: 0 auto;
-    background: #c2b27e;
-}
-
-.input-group-text {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-    align-items: center;
-    padding: .375rem .75rem;
-    margin-bottom: 0;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: var(--primary);
-    text-align: center;
-    white-space: nowrap;
-    background-color: #ffffff;
-    border: 1px solid #c2b27e;
-    border-right: none;
-    border-top-left-radius: .25rem;
-    border-bottom-left-radius: .25rem;
-}
-
-.form-control {
-    display: block;
-    width: 100%;
-    height: calc(1.5em + .75rem + 18px);
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    font-weight: 900;
-    line-height: 1.5;
-    color: #121219;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #c2b27e;
-    border-left: none;
-    border-radius: .25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-.form-control:focus {
-    color: #141619;
-    background-color: #fff;
-    border-color: var(--primary);
-    outline: 0;
-    box-shadow: none;
+.modal-backdrop.show {
+    opacity: .9;
 }
 
 .progress {
@@ -335,107 +246,4 @@ button.close {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     background-color: #c2b27e;
-}
-
-
-#buyCourseModal h4{
-    text-align: center;
-    background: #000104;
-    padding: 1rem;
-    font-weight: 400;
-    font-family: 'Lato', sans-serif;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-}
-
-.buyBtn{
-    background: var(--primary);
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    border-radius: 12px;
-    transform: scale(1);
-    transition: all ease .5s;
-    box-shadow: none;
-}
-
-.success_secrets .sub-title{
-    font-family: sans-serif;
-    font-weight: 700;
-    font-size: 16px;
-}
-
-.success_secrets .sub-content{
-    font-family: sans-serif;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 18.6px;
-}
-
-.success_secrets .sub-desc{
-    color: #2d2d2d;
-    font-family: 'Lato', sans-serif;
-    text-align: center;
-    line-height: 20.8px;
-    letter-spacing: 2px;
-    font-size: 16px;
-}
-
-.section-dec{
-    color: #2d2d2d;
-    font-family: 'Lato', sans-serif;
-    font-size: 16px;
-    letter-spacing: 2px;
-    line-height: 20.8px;
-    text-align: center;
-}
-
-@media (max-width: 991px){
-    button.close {
-        right: -10px;
-        top: -10px;
-    }
-    .form{
-        margin: 0!important;
-    }
-    a.btn {
-        font-size: 18px;
-    }
-    #whatYouWillLearn iframe{
-        height: 300px;
-    }
-    .title {
-        font-size: 30px;
-    }
-    .section-title h3 {
-        font-size: 1.6rem;
-    }
-    .display-4{
-        font-size: 1.2rem;
-    }
-    .header-video_img{
-        margin-bottom: 30px;
-    }
-    .buyBtn{
-        margin-bottom: 20px;
-    }
-    .h3, h3 {
-        font-size: 1.4rem;
-    }
-}
-
-@media (min-width: 991px){
-    #buyCourseModal h4{
-        text-align: center;
-        font-size: 2.8rem;
-        background: #000104;
-        padding: 1rem;
-        font-weight: 700;
-        font-family: 'Lato', sans-serif;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-    }
-    .modal-dialog {
-        max-width: 600px;
-        margin: 1.75rem auto;
-    }
 }
