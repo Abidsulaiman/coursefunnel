@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/stepwizard.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Course Funnel</title>
+</head>
+<body>
+
+<header class="header v-centered min-vh-100">
+    <div class="container">
+        <div class="header_logo text-center mb-2">
+            <img src="assets/img/logo-light.png" width="400" alt="Alex Marsale">
+        </div>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1 class="font-weight-bold text-white">One More Last Challenge for you</h1>
+                <h4 class="text-white mb-0">Complete these steps to get $1000</h4>
+            </div>
+        </div>
+
+        <div class="card border-0 shadow mt-3 amButtonCorner10">
+            <div class="card-body pt-3 pb-5 pl-5 pr-5">
+                <div class="stepwizard">
+                    <div class="stepwizard-row setup-panel">
+                        <div class="stepwizard-step col-xs-3">
+                            <a href="step1.html" class="btn btn-default">Step 1</a>
+                            <p>Add to Messenger</p>
+                        </div>
+                        <div class="stepwizard-step col-xs-3">
+                            <a href="step2.html" class="btn btn-default">Step 2</a>
+                            <p>Join Our Facebook Group</p>
+                        </div>
+                        <div class="stepwizard-step col-xs-3">
+                            <a href="step3.html" class="btn btn-default">Step 3</a>
+                            <p>Follow Us on Facebook</p>
+                        </div>
+                        <div class="stepwizard-step col-xs-3">
+                            <a href="step4.html" class="btn btn-default">Step 4</a>
+                            <p>Follow Us on Instagram</p>
+                        </div>
+                        <div class="stepwizard-step col-xs-3">
+                            <a href="#step-5" class="btn btn-success">Step 5</a>
+                            <p>Follow Us</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form role="form">
+                    <div class="panel panel-primary setup-content" id="step-5">
+                        <div class="panel-body">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-12 text-center">
+                                    <h3 class="panel-title">Share Our <span class="font-weight-bold">Webinar With Your Friends</span></h3>
+                                </div>
+                                <div class="col-lg-4 text-center">
+                                    <input type="text" class="form-control border border-dark" id="webinarLink" value="https://websiteprofitsecrets.com/">
+                                </div>
+                                <div class="col-lg-2 v-centered">
+                                    <a href="#" class="btn btn-primary w-100" onclick="copyWebinar()">
+                                        <i class="fas fa-paste"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center mt-4">
+                                <div class="col-lg-12">
+                                    <div class="alert alert-warning alert-dismissible" style="display: none" id="alertBox">
+                                        <strong>Link has been Copied</strong>
+                                        <button type="button" class="close" onclick="hideMsg()">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <a href="index.html" class="btn btn-success w-100">Finish</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script>
+    function copyWebinar() {
+        /* Get the text field */
+        var copyText = document.getElementById("webinarLink");
+
+        /* Select the text field */
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+
+        /* Copy the text inside the text field */
+        document.execCommand("copy");
+
+        /* Alert the copied text */
+        // alert("Copied the text: " + copyText.value);
+        $('#alertBox').fadeIn(1000).fadeOut(1000);
+    }
+</script>
+</body>
+</html>
