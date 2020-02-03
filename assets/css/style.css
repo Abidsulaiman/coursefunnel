@@ -17,7 +17,6 @@ body{
     color: #2d2d2d;
 }
 
-
 .padding10-bottom {
     padding-bottom: 10px;
 }
@@ -208,6 +207,7 @@ header h3{
 /*modal*/
 .close {
     opacity: 1;
+    z-index: 99999;
 }
 .modal .modal-content {
     position: relative;
@@ -225,7 +225,8 @@ header h3{
 }
 
 .modal-backdrop.show {
-    opacity: .9;
+    opacity: 1;
+    background: #000104;
 }
 
 .progress {
